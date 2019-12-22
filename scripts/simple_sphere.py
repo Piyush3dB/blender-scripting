@@ -51,3 +51,7 @@ if __name__ == '__main__':
     rnd.resolution_percentage = 100
     rnd.filepath = os.path.join(render_folder, 'simple_sphere.png')
     bpy.ops.render.render(write_still=True)
+
+    # Save blend file
+    bfile = os.path.join(render_folder, __file__.replace('.py', '.blend'))
+    utils.save_blend(bfile)

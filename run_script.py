@@ -1,9 +1,24 @@
 import bpy
 import os
 import sys
+import pdb as pdb
+
+#pdb.set_trace()
 
 # Specify the script to be executed
 scriptFile = "fisher_iris_visualization.py"
+scriptFile = "metaballs.py"
+scriptFile = "parametric_torus.py"
+scriptFile = "tetrahedron_fractal.py"
+scriptFile = "voronoi_sphere.py"
+scriptFile = "voronoi_landscape.py"
+scriptFile = "phyllotaxis_flower.py"
+scriptFile = "simple_sphere.py"
+#scriptFile = "rugged_donut.py"
+#scriptFile = "metaballs.py"
+#scriptFile = sys.argv[-1]
+
+
 
 # Check if script is executed in Blender and get absolute path of current folder
 if bpy.context.space_data is not None:

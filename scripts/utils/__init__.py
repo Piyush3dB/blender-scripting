@@ -4,6 +4,14 @@ from math import sin, cos, pi
 tau = 2*pi
 import colorsys
 import os
+import pdb as pdb
+
+def save_blend(bfile):
+    if os.path.exists(bfile):
+        os.remove(bfile) 
+
+    bpy.ops.wm.save_as_mainfile(filepath=bfile)
+    print("[INFO] Saved "+bfile)
 
 
 def removeObject(obj):
@@ -119,7 +127,7 @@ def rainbowLights(r=5, n=100, freq=2, energy=0.1):
 
 
 def removeAll(type=None):
-    # Possible type: ‘MESH’, ‘CURVE’, ‘SURFACE’, ‘META’, ‘FONT’, ‘ARMATURE’, ‘LATTICE’, ‘EMPTY’, ‘CAMERA’, ‘LAMP’
+    # Possible type: ï¿½MESHï¿½, ï¿½CURVEï¿½, ï¿½SURFACEï¿½, ï¿½METAï¿½, ï¿½FONTï¿½, ï¿½ARMATUREï¿½, ï¿½LATTICEï¿½, ï¿½EMPTYï¿½, ï¿½CAMERAï¿½, ï¿½LAMPï¿½
     if type:
         bpy.ops.object.select_all(action='DESELECT')
         bpy.ops.object.select_by_type(type=type)
@@ -128,6 +136,9 @@ def removeAll(type=None):
         # Remove all elements in scene
         bpy.ops.object.select_by_layer()
         bpy.ops.object.delete(use_global=False)
+        #bpy.ops.object.select_all(action='DESELECT')
+        #bpy.ops.object.select_by_type(type=type)
+        #bpy.ops.object.delete()
 
 
 def simpleMaterial(diffuse_color):
