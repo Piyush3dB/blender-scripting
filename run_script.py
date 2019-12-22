@@ -16,6 +16,8 @@ scriptFile = "phyllotaxis_flower.py"
 scriptFile = "simple_sphere.py"
 #scriptFile = "rugged_donut.py"
 #scriptFile = "metaballs.py"
+scriptFile = "fisher_iris_visualization.py"
+
 #scriptFile = sys.argv[-1]
 
 
