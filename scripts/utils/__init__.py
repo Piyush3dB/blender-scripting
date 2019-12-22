@@ -25,6 +25,7 @@ def removeObject(obj):
         raise NotImplementedError('Other types not implemented yet besides \'MESH\'')
 
 
+#CAMERA FUNCTIONS#######################################################################################
 def trackToConstraint(obj, target):
     constraint = obj.constraints.new('TRACK_TO')
     constraint.target = target
@@ -63,6 +64,12 @@ def camera(origin, target=None, lens=35, clip_start=0.1, clip_end=200, type='PER
 
     if target: trackToConstraint(obj, target)
     return obj
+
+########################################################################################################
+
+
+
+
 
 
 def lamp(origin, type='POINT', energy=1, color=(1,1,1), target=None):
